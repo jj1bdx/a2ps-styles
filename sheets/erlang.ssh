@@ -1,0 +1,107 @@
+# Style sheet for erlang
+# Copyright (c) 2002 Johan Garpendahl
+# $Id$
+#
+
+#
+# This file is part of a2ps.
+# 
+# This program is free software; you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation; either version 2, or (at your option)
+# any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program; see the file COPYING.  If not, write to
+# the Free Software Foundation, 59 Temple Place - Suite 330,
+# Boston, MA 02111-1307, USA.
+#
+
+style Erlang is
+
+written by "Johan Garpendahl <address@hidden>"
+version is 1.1
+
+documentation is
+  "To be done."
+end documentation
+
+first alphabet is
+   "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz_"
+second alphabet is
+   "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz_"
+
+case sensitive
+
+keywords in Keyword are
+    abs, append_element, apply, atom_to_list, binary_to_float,
+    binary_to_list, binary_to_term, bump_reductions, cancel_timer,
+    check_process_code, concat_binary, date, delete_module, demonitor,
+    disconnect_node, display, element, erase, exit, fault, 
+    float_to_list, fun_info, fun_to_list, garbage_collect, get,
+    get_cookie, get_keys, group_leader, halt, hash, hd, info,
+    integer_to_list, is_alive, is_builtin, is_process_alive, length,
+    link, list_to_atom, list_to_binary, list_to_float,
+    list_to_integer, list_to_pid, list_to_tuple, load_module, loaded,
+    localtime, localtime_to_universaltime, make_ref, make_tuple, md5,
+    md5_final, md5_init, md5_update, module_loaded, monitor,
+    monitor_node, node, nodes, now, open_port, phash, pid_to_list,
+    port_close, port_command, port_connect, port_control, port_call,
+    port_info, port_to_list, ports, pre_loaded, process_display,
+    process_flag, process_info, processes, purge_module,
+    read_timer, ref_to_list, register, registered, resume_process,
+    round, self, send_after, set_cookie, setelement, size, spawn,
+    spawn_link, spawn_opt, split_binary, start_timer, statistics,
+    suspend_process, system_flag, system_info, term_to_binary, throw,
+    time, tl, trace, trace_info, trace_pattern, trunc, tuple_to_list,
+    universaltime, universaltime_to_localtime, unlink, unregister,
+    whereis, yield
+end keywords
+
+keywords in Keyword_strong are
+    if, of, receive, after, "case", begin, "end", when, atom,
+    constant, float, integer, list, number, pid, port, reference,
+    tuple, binary, div, rem, band, bor, bxor, bsl, bsr, bnot, catch
+end keywords
+
+optional operators are
+   -> \rightarrow,
+   <- \leftarrow,
+   /([\/][=])/ \neq,
+   == \equiv,
+   =:=,
+   /([+][+])/,
+   /([-][-])/,
+   <<,
+   >>,
+   =< \leq,
+   >= \geq
+end operators
+
+operators are
+   (/(^[-])/
+    /([a-z][a-zA-Z0-9_]*)/
+    \1 Plain, \2 Keyword_strong),
+
+   (/([?])/
+    /([a-zA-Z0-9_]*)/
+    \1 String, \2 String),
+
+   (/([$])/
+    /([\\]*.)/
+    \1 String, \2 String)
+end operators
+
+sequences are
+    % Comment,
+    "'" String "'",
+    C-string
+end sequences
+
+end style
+
