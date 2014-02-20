@@ -1,0 +1,26 @@
+--- sheets.map.FCS	2014-02-20 16:13:05.000000000 +0900
++++ sheets.map	2014-02-20 16:14:01.000000000 +0900
+@@ -219,6 +219,13 @@
+ 	/*.eps[fi]/i
+ 	/*.pstex/i
+ 
++# Erlang files
++erlang:	/*.erl/i
++	/*.hrl/i
++	/*.xrl/i
++	/*.yrl/i
++	/*.erlang/i
++
+ # Fortran files
+ # By default a2ps chooses the style sheet `fortran' which tries to
+ # support both fixed and free forms of comments.  Nevertheless, this
+@@ -271,6 +278,9 @@
+ lex:	/*.l/
+ 	/*.lex/
+ 
++# Lua files
++lua:	/*.lua/
++
+ # 68000 files
+ 68000:	/*.68000/
+ 	/*.[sS]/
