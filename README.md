@@ -10,6 +10,7 @@ Style sheet collection for [GNU a2ps](http://www-inf.enst.fr/~demaille/a2ps/)
 ## Other contents
 
 * sheets.map.patch - a patch to add the style sheets provided in this repository
+* a2ps-site.cfg - a patched file for a decent ISO A4 printer. See <http://neva.li/post/122597426/using-a2ps-on-mac-os-x> for the details. Put into the appropriate place.
 
 ## License
 
